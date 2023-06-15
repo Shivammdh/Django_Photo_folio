@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+  <a class="navbar-brand" href="{% url 'home' %}">E Shop</a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      {% url 'home' as url %}
+      <li class="nav-item {% if request.path == url %}active{% endif %}">
+        <a class="nav-link" href="{{ url }}">Home</a>
+      </li>
+      {% url 'about' as url %}
+      <li class="nav-item {% if request.path == url %}active{% endif %}">
+        <a class="nav-link" href="{{ url }}">About</a>
+      </li>
+      {% url 'account_signup' as url %}
+      <li class="nav-item {% if request.path == url %}active{% endif %}">
+        <a id="sign-up-link" class="nav-link" href="{{ url }}">Sign Up</a>
+      </li>
+      {% url 'account_login' as url %}
+      <li class="nav-item {% if request.path == url %}active{% endif %}">
+        <a id="log-in-link" class="nav-link" href="{{ url }}">Sign In</a>
+      </li>
+    </ul>
+  </div>
+</nav>

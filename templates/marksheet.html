@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<head>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid white;
+        }
+    </style>
+</head>
+<main id="main" data-aos="fade" data-aos-delay="1500">
+
+    <!-- ======= End Page Header ======= -->
+    <div class="page-header d-flex align-items-center">
+        <div class="container position-relative">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-6 text-center">
+                    <h2>Contact</h2>
+                    <p>Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas
+                        consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione
+                        sint. Sit quaerat ipsum dolorem.</p>
+
+                </div>
+            </div>
+        </div>
+    </div><!-- End Page Header -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+        <div class="container">
+
+            <div class="row gy-4 justify-content-center">
+
+                <div class="col-lg-3">
+                    <div class="info-item d-flex">
+                        <i class="bi bi-geo-alt flex-shrink-0"></i>
+                        <div>
+                            <h4>Location:</h4>
+                            <p>A108 Adam Street, New York, NY 535022</p>
+                        </div>
+                    </div>
+                </div><!-- End Info Item -->
+
+                <div class="col-lg-3">
+                    <div class="info-item d-flex">
+                        <i class="bi bi-envelope flex-shrink-0"></i>
+                        <div>
+                            <h4>Email:</h4>
+                            <p>info@example.com</p>
+                        </div>
+                    </div>
+                </div><!-- End Info Item -->
+
+                <div class="col-lg-3">
+                    <div class="info-item d-flex">
+                        <i class="bi bi-phone flex-shrink-0"></i>
+                        <div>
+                            <h4>Call:</h4>
+                            <p>+1 5589 55488 55</p>
+                        </div>
+                    </div>
+                </div><!-- End Info Item -->
+
+            </div>
+
+            <div class="row justify-content-center mt-4">
+
+                <div class="col-lg-9">
+
+                    <form action='' method="POST">
+                        {% csrf_token %}
+
+                        {% comment %} <div class="col-md-6 form-group"> {% endcomment %}
+                            <div class="row">
+                                <input type="text" name="hindi" class="form-control" id="name" placeholder="hindi"
+                                    required>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <input type="text" name="english" class="form-control" id="name" placeholder="english"
+                                    required>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <input type="text" name="mathematics" class="form-control" id="name"
+                                    placeholder="mathematics" required>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <input type="text" name="physics" class="form-control" id="name" placeholder="physics"
+                                    required>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <input type="text" name="chemistry" class="form-control" id="name"
+                                    placeholder="chemistry" required>
+                            </div>
+                            <br>
+                            <div>
+                                
+                                <input type="submit" value="Marksheet">
+                            </div>
+                            <br>
+                           
+                            <table>
+                                <tr>
+                                    <td>SUBJECT</td>
+                                    <td>TOTAL MARKS</td>
+                                    <td>YOUR MARKS</td>
+                                </tr>
+                                <tr>
+                                    <td>Hindi</td>
+                                    <td>100</td>
+                                    <td>{{hindi}}</td>
+                                </tr>
+                                <tr>
+                                    <td>English</td>
+                                    <td>100</td>
+                                    <td>{{english}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Mathematics</td>
+                                    <td>100</td>
+                                    <td>{{math}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Physics</td>
+                                    <td>100</td>
+                                    <td>{{physics}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Chemistry</td>
+                                    <td>100</td>
+                                    <td>{{chemistry}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Parcentage</td>
+                                    <td>100%</td>
+                                    <td>{{parcentage}}%</td>
+                                </tr>
+                            </table>
+
+                    </form>
+                </div><!-- End Contact Form -->
+
+            </div>
+
+        </div>
+    </section><!-- End Contact Section -->
+
+</main><!-- End #main -->
+
+<!-- ======= Footer ======= -->
+{% endblock %}

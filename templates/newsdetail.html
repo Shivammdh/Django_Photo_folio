@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+  <main id="main" data-aos="fade" data-aos-delay="1500">
+
+    <!-- ======= End Page Header ======= -->
+    <div class="page-header d-flex align-items-center">
+      <div class="container position-relative">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-6 text-center">
+            <h2>{{newsdetaildata.news_title | safe}}</h2>
+            <p>{{newsdetaildata.news_description | safe}}</p>
+
+          </div>
+        </div>
+      </div>
+    </div><!-- End Page Header -->
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+{% endblock  %}
